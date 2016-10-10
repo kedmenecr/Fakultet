@@ -1,1 +1,13 @@
 E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\bin\Debug\Vježba_3 Kalkulator.exe.config
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\bin\Debug\Vježba_3 Kalkulator.exe
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\bin\Debug\Vježba_3 Kalkulator.pdb
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\obj\Debug\Kalkulator.g.cs
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\obj\Debug\App.g.cs
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\obj\Debug\Vježba_3 Kalkulator_MarkupCompile.cache
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\obj\Debug\Vježba_3 Kalkulator_MarkupCompile.lref
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\obj\Debug\Kalkulator.baml
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\obj\Debug\Vježba_3 Kalkulator.g.resources
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\obj\Debug\Vježba_3_Kalkulator.Properties.Resources.resources
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\obj\Debug\Vježba_3 Kalkulator.csproj.GenerateResource.Cache
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\obj\Debug\Vježba_3 Kalkulator.exe
+E:\Kedmenec\Fakultet\2.godina\1.Semestar\OOP-1\Vježba_3 Kalkulator\Vježba_3 Kalkulator\obj\Debug\Vježba_3 Kalkulator.pdb
