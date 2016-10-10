@@ -24,7 +24,7 @@
 
         <TextBox Name="prviBrojTextBox" Grid.Row="0" Grid.Column=" 1" Width="150" HorizontalAlignment="Left" Margin="10" Height="20" />
         <TextBox Name="drugiBrojTextBox" Grid.Row="1" Grid.Column=" 1" Width="150" HorizontalAlignment="Left" Margin="10" Height="20" />
-        <TextBox Name="rezultatBrojTextBox" Grid.Row="3" Grid.Column=" 1" Width="150" HorizontalAlignment="Left" Margin="10" Height="20" />
+        <TextBox Name="rezultatBrojTextBox" Grid.Row="3" Grid.Column=" 1" Width="400" HorizontalAlignment="Left" Margin="10" Height="20" />
 
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
             Orientation="Horizontal">

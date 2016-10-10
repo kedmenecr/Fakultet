@@ -14,6 +14,9 @@ using System.Windows.Shapes;
 
 namespace Vježba_3_Kalkulator
 {
+    enum Operacija { Zbrajanje , Oduzimanje , Dijeljenje , Mnozenje };
+    
+            
     /// <summary>
     /// Interaction logic for Kalkulator.xaml
     /// </summary>
@@ -22,58 +25,71 @@ namespace Vježba_3_Kalkulator
         public Kalkulator()
         {
             InitializeComponent();
+            //prviBrojTextBox.Text = "101";
+
         }
 
         
 
       
-        
-        private void zbrojButton_Click_1(object sender, RoutedEventArgs e)
-        {
+        private void Izracunaj(Operacija o) {
             double prviBroj;
             double drugiBroj;
-            double rezultat;
+            double rezultat = 0;
 
-            prviBroj = double.Parse(prviBrojTextBox.Text);
-            drugiBroj = double.Parse(drugiBrojTextBox.Text);
-            rezultat = prviBroj + drugiBroj;
+
+            try
+            {
+
+
+
+                prviBroj = double.Parse(prviBrojTextBox.Text);
+                drugiBroj = double.Parse(drugiBrojTextBox.Text);
+                //računanje 
+                if (o == Operacija.Zbrajanje)
+                {
+                    rezultat = prviBroj + drugiBroj;
+                }
+                else if (o == Operacija.Oduzimanje)
+                {
+                    rezultat = prviBroj - drugiBroj;
+                }
+                else if (o == Operacija.Dijeljenje)
+                {
+                    rezultat = prviBroj / drugiBroj;
+                }
+                else
+                {
+                    rezultat = prviBroj * drugiBroj;
+                }
+            }
+
+
+            catch (Exception greska)
+            {
+                rezultatBrojTextBox.Text = greska.Message;
+            }
             rezultatBrojTextBox.Text = rezultat.ToString();
+        }
+        private void zbrojButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            Izracunaj(Operacija.Zbrajanje);
         }
 
         private void oduzmiButton_Click(object sender, RoutedEventArgs e)
         {
-            double prviBroj;
-            double drugiBroj;
-            double rezultat;
-
-            prviBroj = double.Parse(prviBrojTextBox.Text);
-            drugiBroj = double.Parse(drugiBrojTextBox.Text);
-            rezultat = prviBroj - drugiBroj;
-            rezultatBrojTextBox.Text = rezultat.ToString();
+            Izracunaj(Operacija.Oduzimanje);
         }
 
         private void pomnoziButton_Click(object sender, RoutedEventArgs e)
         {
-            double prviBroj;
-            double drugiBroj;
-            double rezultat;
-
-            prviBroj = double.Parse(prviBrojTextBox.Text);
-            drugiBroj = double.Parse(drugiBrojTextBox.Text);
-            rezultat = prviBroj * drugiBroj;
-            rezultatBrojTextBox.Text = rezultat.ToString();
+            Izracunaj(Operacija.Mnozenje);
         }
 
         private void podijeliButton_Click(object sender, RoutedEventArgs e)
         {
-            double prviBroj;
-            double drugiBroj;
-            double rezultat;
+            Izracunaj(Operacija.Dijeljenje);
 
-            prviBroj = double.Parse(prviBrojTextBox.Text);
-            drugiBroj = double.Parse(drugiBrojTextBox.Text);
-            rezultat = prviBroj / drugiBroj;
-            rezultatBrojTextBox.Text = rezultat.ToString();
         }
     }
     }
