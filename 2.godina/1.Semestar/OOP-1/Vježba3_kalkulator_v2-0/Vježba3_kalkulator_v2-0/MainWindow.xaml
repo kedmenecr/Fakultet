@@ -1,0 +1,58 @@
+﻿<Window x:Class="Vježba3_kalkulator_v2_0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vježba3_kalkulator_v2_0"
+        mc:Ignorable="d"
+        Title="Oglasnik" Height="600" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <Label Grid.ColumnSpan="2" Content="Prodaja oglasa za prodaju automobila" HorizontalAlignment="Center" FontSize="20" />
+        
+        <Label Content="Tip vozila" Grid.Row="1" />
+        <TextBox Name="tipTextBox" Grid.Column="1" Grid.Row="1" Margin="3" />
+
+        <Label Content="Proizvođač" Grid.Row="2"/>
+        <ListBox Name="proizvođačCombobox" Grid.Row="2" Grid.Column="1" />
+
+        <Label  Content="Godina proizvodnje" Grid.Row="3" />
+        <ComboBox Name="godinaProzivodnjeComboBox" Grid.Column="1" Grid.Row="3" Margin = "3" />
+
+        <Label Content="Novo vozilo" Grid.Row="4" />
+        <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal" VerticalAlignment="Center" >
+            <RadioButton GroupName="novoVoziloRadioButton" Name="novoRadioButton" Content="Novo" Margin="3" />
+            <RadioButton GroupName="novoVoziloRadioButton" Name="koristenoRadioButton" Content="Korišteno" Margin="3" />
+        </StackPanel>
+
+        <Label Name="prviVlasnik"   Content="Prvi vlasnik" Grid.Row="5"/>
+        <CheckBox Name="prviVlasnikCheckBox" Grid.Column="1" Grid.Row="5" Margin="3" VerticalAlignment = "Center"  />
+
+        <Label Content="Dodatna Oprema " Grid.Row="6" />
+        <ListBox Name="OpremaList" Grid.Column="1" Grid.Row="6" Margin="3" SelectionMode="Extended" />
+
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="7" >
+            <Button Name="posaljiButton" Content="Pošalji" HorizontalAlignment="Left" 
+                    Padding="20,10,20,10" Margin="5" Click="posaljiButton_Click" />
+            <Button Name="izlazButton" Content="izlaz" HorizontalAlignment="Left" 
+                    Padding="20,10,20,10" Margin="5" Click="izlazButton_Click" />
+
+
+        </StackPanel>
+
+    </Grid>
+</Window>
