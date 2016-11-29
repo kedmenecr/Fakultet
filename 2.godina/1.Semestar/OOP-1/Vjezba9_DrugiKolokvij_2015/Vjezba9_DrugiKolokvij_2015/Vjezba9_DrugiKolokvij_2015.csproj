@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logika\GlazbeniAlbum.cs" />
+    <Compile Include="Logika\Izvodac.cs" />
+    <Compile Include="Logika\PjesmaNaAlbumu.cs" />
+    <Compile Include="Logika\Zanr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
