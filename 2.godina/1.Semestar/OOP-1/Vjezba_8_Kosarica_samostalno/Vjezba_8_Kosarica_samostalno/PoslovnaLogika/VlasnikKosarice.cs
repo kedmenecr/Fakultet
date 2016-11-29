@@ -42,6 +42,10 @@ namespace Vjezba_8_Kosarica_samostalno.PoslovnaLogika
             this.adresa= adresa;
         }
 
+        public override string ToString() {
+            return "a";
+        }
+
     }
 }
 
