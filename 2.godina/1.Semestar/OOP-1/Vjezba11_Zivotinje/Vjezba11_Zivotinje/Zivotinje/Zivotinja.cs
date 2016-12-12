@@ -22,6 +22,11 @@ namespace Vjezba11_Zivotinje.Zivotinje
         {
             return "Neznam se glasati!";
         }
+        public Zivotinja(string naziv)
+        {
+            this.naziv = naziv;
+
+        }
 
     }
 }

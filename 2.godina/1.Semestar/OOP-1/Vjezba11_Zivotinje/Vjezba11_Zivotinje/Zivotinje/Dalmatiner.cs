@@ -8,7 +8,11 @@ namespace Vjezba11_Zivotinje.Zivotinje
 {
     class Dalmatiner : Pas
     {
-        public override string GlasajSe()
+        public Dalmatiner(string naziv) : base(naziv)
+        {
+        }
+
+        public new string GlasajSe()
         {
             return "Bark bak";
         }

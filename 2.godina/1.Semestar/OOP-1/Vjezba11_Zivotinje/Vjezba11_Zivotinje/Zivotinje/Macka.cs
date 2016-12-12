@@ -8,6 +8,10 @@ namespace Vjezba11_Zivotinje.Zivotinje
 {
     class Macka:Zivotinja
     {
+        public Macka(string naziv) : base(naziv)
+        {
+        }
+
         public override string GlasajSe()
         {
             return "mijau";
