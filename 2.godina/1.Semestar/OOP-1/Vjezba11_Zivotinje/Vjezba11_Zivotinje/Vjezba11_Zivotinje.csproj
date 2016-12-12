@@ -45,13 +45,15 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zivotinje\Dalmatiner.cs" />
     <Compile Include="Zivotinje\Krava.cs" />
     <Compile Include="Zivotinje\Macka.cs" />
     <Compile Include="Zivotinje\Pas.cs" />
-    <Compile Include="Zivotinje\Zivotinje.cs" />
+    <Compile Include="Zivotinje\Zivotinja.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Zivotinje\ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

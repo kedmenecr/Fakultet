@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vjezba11_Zivotinje.Zivotinje
 {
-    class Zivotinje
+    class Zivotinja
     {
         private string naziv;
 
@@ -18,7 +18,7 @@ namespace Vjezba11_Zivotinje.Zivotinje
         {
             return naziv;
         }
-        public string GlasajSe()
+        public virtual string GlasajSe()
         {
             return "Neznam se glasati!";
         }

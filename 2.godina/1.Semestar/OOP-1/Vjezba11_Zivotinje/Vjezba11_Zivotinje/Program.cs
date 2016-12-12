@@ -10,10 +10,28 @@ namespace Vjezba11_Zivotinje
     {
         static void Main(string[] args)
         {
-            Pas bobi = new Pas();
+            Zivotinja bobi = new Pas();
             bobi.setNaziv("PES BOBI");
-            Console.WriteLine("{0} : {1}",bobi.getNaziv(),bobi.GlasajSe());
-            
+            Krava Milka = new Krava();
+            Milka.setNaziv("Milka");
+            Macka Mila = new Macka();
+            Mila.setNaziv("Milka");
+            Dalmatiner Rex = new Dalmatiner();
+            Rex.setNaziv("Rex");
+            List<Zivotinja> zoo = new List<Zivotinja>();
+            zoo.Add(bobi);
+            zoo.Add(Milka);
+            zoo.Add(Mila);
+
+            zoo.Add(Rex);
+
+            foreach ( Zivotinja z in zoo)
+            {
+                Console.WriteLine("{0} : {1} ",z.getNaziv(), z.GlasajSe());
+            }
+
+
+
         }
     }
 }

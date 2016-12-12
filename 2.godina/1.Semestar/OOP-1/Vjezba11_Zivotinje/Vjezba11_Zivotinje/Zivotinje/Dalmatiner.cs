@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Vjezba11_Zivotinje.Zivotinje
 {
-    class Macka:Zivotinja
+    class Dalmatiner : Pas
     {
         public override string GlasajSe()
         {
-            return "mijau";
+            return "Bark bak";
         }
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Vjezba11_Zivotinje.Zivotinje
 {
-    class Krava:Zivotinje
+    class Krava:Zivotinja
     {
+        public override string GlasajSe()
+        {
+            return "muuuu";
+        }
     }
 }

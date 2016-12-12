@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Vjezba11_Zivotinje.Zivotinje
 {
-    class Pas  : Zivotinje
+    class Pas  : Zivotinja
     {
-        public string GlasajSe() {
+        public override string GlasajSe() {
             return "bark";
         }
     }
