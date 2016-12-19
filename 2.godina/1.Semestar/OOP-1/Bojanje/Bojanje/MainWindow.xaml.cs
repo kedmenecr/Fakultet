@@ -25,10 +25,55 @@ namespace Bojanje
         private Point PocetnaTocka;
         private Point zavrsnaTocka;
 
+        //rectangle
         private Rectangle sjena;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            PocetnaTocka =
+                e.GetPosition(PlocaCanvas);
+                if(sjena == null)
+            {
+                sjena = new Rectangle();
+                PlocaCanvas.Children.Add(sjena);
+            }
+        }
+
+        private void Window_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            sjena = null;
+        }
+
+        private void Window_MouseMove(object sender, MouseEventArgs e)
+        {
+            KordinateTextBox.Text =
+                e.GetPosition(PlocaCanvas).X.ToString() + " / " +
+                e.GetPosition(PlocaCanvas).Y.ToString();
+
+            if (sjena != null)
+            {
+                //sirina i visina
+                sjena.Width = Math.Abs(PocetnaTocka.X - zavrsnaTocka.X);
+                sjena.Height = Math.Abs(PocetnaTocka.Y - zavrsnaTocka.Y);
+
+                //brushes i sthicckens
+                sjena.Fill = BojaTextBox.Background;
+                sjena.Stroke = Brushes.Black;
+                sjena.StrokeThickness = double.Parse(LinijaTextBox.Text);
+
+                //pozicija
+                Canvas.SetTop(sjena, Math.Min(PocetnaTocka.X, zavrsnaTocka.Y));
+                Canvas.SetLeft(sjena, Math.Min(PocetnaTocka.X, zavrsnaTocka.Y));
+
+
+                
+
+
+            }
         }
     }
 }
