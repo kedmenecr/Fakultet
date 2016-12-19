@@ -11,6 +11,7 @@ namespace Vjezba11_Zivotinje.Zivotinje
         public Pas(string naziv) : base(naziv)
         {
         }
+       
 
         public override string GlasajSe() {
             return "bark";

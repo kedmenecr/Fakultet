@@ -32,6 +32,7 @@ namespace Vjezba11_Zivotinje
             zoo.Add(new Macka("Garfield"));
             zoo.Add(new Krava("Milka"));
             zoo.Add(new Dalmatiner("Rex"));
+
             foreach (Zivotinja z in zoo)
             {
                 Console.WriteLine("{0} : {1} ",z.getNaziv(), z.GlasajSe());
