@@ -16,7 +16,7 @@
             <TextBox Name="KordinateTextBox" Width="100" Padding="3" Margin="3" ></TextBox>
 
             <Label Content="Boja" Padding="3" Margin="3" ></Label>
-            <TextBox Name="BojaTextBox" Padding="3" Width="100" Margin="3" Background="#5500ff00"  ></TextBox>
+            <TextBox Name="BojaTextBox" Padding="3" Width="100" Margin="3" Background="#5500ff00" TextChanged="BojaTextBox_TextChanged"  ></TextBox>
 
             <Label Content="LinijaTextBox" Padding="3" Margin="3"></Label>
             <TextBox Name="LinijaTextBox" Padding="3" Width="100" Margin="3" ></TextBox>

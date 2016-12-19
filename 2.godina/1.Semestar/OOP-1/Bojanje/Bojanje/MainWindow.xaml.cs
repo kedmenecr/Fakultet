@@ -75,5 +75,23 @@ namespace Bojanje
 
             }
         }
+
+        private void BojaTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(BojaTextBox.Text));
+            BojaTextBox.Background = brush ;
+        }
+
+        private void undoButton_Click(object sender, RoutedEventArgs e)
+        {
+        
+            
+            if (PlocaCanvas.Children.Count != 0)
+            {
+                PlocaCanvas.Children.RemoveAt(PlocaCanvas.Children.Count - 1);
+            }
+
+       
+    }
     }
 }
