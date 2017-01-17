@@ -14,8 +14,8 @@ namespace KoktelSamostalnoWpf
             // preprema koktela
             Koktel CubaLibre = new Koktel("Cuba Libre");
             CubaLibre.Dodaj(new Limeta(0.5));
-            CubaLibre.Dodaj(new Rum("Baccardi gold", 0.4));
-            CubaLibre.Dodaj(new CocaCola("zero", 1));
+            CubaLibre.Dodaj(new Rum(0.4, "Baccardi gold"));
+            CubaLibre.Dodaj(new CocaCola(1,"zero"));
             CubaLibre.Dodaj(new Led("drobljeni"));
             Console.WriteLine(CubaLibre.Posluzi());
             Console.ReadKey();

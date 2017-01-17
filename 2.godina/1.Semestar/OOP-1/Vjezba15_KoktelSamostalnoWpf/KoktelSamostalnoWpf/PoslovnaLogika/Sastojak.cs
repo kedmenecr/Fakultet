@@ -23,23 +23,12 @@ namespace KoktelSamostalnoWpf.PoslovnaLogika
             this.kolicina = kolicina;
         }
 
-        public Sastojak(string naziv, double kolicina)
+        public Sastojak( double kolicina, string naziv)
         {
-            this.naziv = naziv;
             this.kolicina = kolicina;
-        }
-       
-
-        public Sastojak(string naziv,double kolicina,double defaulKolicina)
-        {
             this.naziv = naziv;
-            this.kolicina = kolicina;
-            
         }
-
-       
-      
-       
+  
         
 
         public virtual string Prikazi()

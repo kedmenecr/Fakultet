@@ -8,13 +8,13 @@ namespace KoktelSamostalnoWpf.PoslovnaLogika
 {
     class CocaCola:Sastojak
     {
-        public CocaCola(string naziv,double kolicina) : base(naziv, kolicina)
+        public CocaCola(double kolicina, string naziv) :base(kolicina, naziv)
         {
             kolicinaDeci = kolicina * 2.5;
         }
         public override string Prikazi()
         {
-            return kolicina + " Coca Cola Zero";
+            return kolicina + " Coca Cola " + naziv ;
         }
 
     }

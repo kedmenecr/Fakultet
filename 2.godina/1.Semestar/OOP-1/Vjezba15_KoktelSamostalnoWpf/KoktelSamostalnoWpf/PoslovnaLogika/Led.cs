@@ -15,7 +15,7 @@ namespace KoktelSamostalnoWpf.PoslovnaLogika
         }
         public override string Prikazi()
         {
-            return "Led zdrobljeni";
+            return "Led " + naziv;
         }
 
     }

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KoktelSamostalnoWpf.PoslovnaLogika.Sastojak">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAgAgAAAAAIAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PoslovnaLogika\Sastojak.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KoktelSamostalnoWpf.PoslovnaLogika.Rum">
+    <Position X="2" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PoslovnaLogika\Rum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KoktelSamostalnoWpf.PoslovnaLogika.Limeta">
+    <Position X="4.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PoslovnaLogika\Limeta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KoktelSamostalnoWpf.PoslovnaLogika.Led">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PoslovnaLogika\Led.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KoktelSamostalnoWpf.PoslovnaLogika.Koktel">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>PoslovnaLogika\Koktel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KoktelSamostalnoWpf.PoslovnaLogika.CocaCola">
+    <Position X="8.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PoslovnaLogika\CocaCola.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KoktelSamostalnoWpf.Program">
+    <Position X="9.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

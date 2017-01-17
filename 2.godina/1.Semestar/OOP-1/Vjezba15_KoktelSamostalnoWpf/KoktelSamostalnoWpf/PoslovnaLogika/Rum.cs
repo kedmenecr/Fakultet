@@ -8,11 +8,12 @@ namespace KoktelSamostalnoWpf.PoslovnaLogika
 {
     class Rum:Sastojak
     {
-        public Rum(string naziv,double kolicina) :base(naziv,kolicina)
+        public Rum(double kolicina , string naziv) :base(kolicina, naziv)
         {
             this.naziv = naziv;
             kolicinaDeci = kolicina;
         }
+
         public override string Prikazi()
         {
             return kolicina + "dcl ruma Bacardi Gold";
