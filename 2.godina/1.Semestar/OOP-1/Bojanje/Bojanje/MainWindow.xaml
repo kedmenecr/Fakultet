@@ -1,0 +1,32 @@
+﻿<Window x:Class="Bojanje.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bojanje"
+        mc:Ignorable="d"
+        Title="MEV Paint" Height="600" Width="800" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseLeftButtonUp="Window_MouseLeftButtonUp" MouseMove="Window_MouseMove" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0"  Margin="3" >
+            <Label Content="Kordinate" Margin="3" Padding="3"></Label>
+            <TextBox Name="KordinateTextBox" Width="100" Padding="3" Margin="3" ></TextBox>
+
+            <Label Content="Boja" Padding="3" Margin="3" ></Label>
+            <TextBox Name="BojaTextBox" Padding="3" Width="100" Margin="3" Background="#5500ff00" TextChanged="BojaTextBox_TextChanged"  ></TextBox>
+
+            <Label Content="LinijaTextBox" Padding="3" Margin="3"></Label>
+            <TextBox Name="LinijaTextBox" Padding="3" Width="100" Margin="3" ></TextBox>
+            <Button Name="undoButton" Padding="3" Content="Korak natrag" Margin="3" ></Button>
+            
+        </StackPanel>
+
+        <Border Grid.Row="1" Grid.Column="0" Margin="5" BorderBrush="Black"
+                BorderThickness="1">
+        <Canvas Name="PlocaCanvas"></Canvas>
+        </Border>
+    </Grid>
+</Window>

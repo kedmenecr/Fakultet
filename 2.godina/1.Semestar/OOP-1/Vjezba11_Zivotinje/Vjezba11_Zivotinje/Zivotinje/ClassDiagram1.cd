@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Vjezba11_Zivotinje.Zivotinje.Krava" Collapsed="true">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zivotinje\Krava.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vjezba11_Zivotinje.Zivotinje.Macka" Collapsed="true">
+    <Position X="8.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zivotinje\Macka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vjezba11_Zivotinje.Zivotinje.Pas" Collapsed="true">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zivotinje\Pas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vjezba11_Zivotinje.Zivotinje.Zivotinja" Collapsed="true">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAARAAAAA=</HashCode>
+      <FileName>Zivotinje\Zivotinja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vjezba11_Zivotinje.Program" Collapsed="true">
+    <Position X="11.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vjezba11_Zivotinje.Zivotinje.Dalmatiner" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zivotinje\Dalmatiner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
