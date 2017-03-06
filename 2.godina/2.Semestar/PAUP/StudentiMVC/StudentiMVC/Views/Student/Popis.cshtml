@@ -1,0 +1,48 @@
+﻿@using StudentiMVC.Models
+@model List<Student>
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+    int brojac = 0;
+}
+@{ 
+    
+
+}}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+    <h2>@ViewBag.Title</h2>
+    <table border="1" cellspacing="2"  cellpadding="4" >
+        <tr>
+            <td>Redni broj</td>
+            <th>Ime i prezime</th>
+            <th>Spol</th>
+            <th>OIB</th>
+            <th>Detaljno</th>
+        </tr>
+        @foreach(Student st in Model)
+        {
+            <tr>
+                <td>@(++brojac)</td>
+                <td>@st.Ime @st.Prezime</td>
+                <td>@st.Spol</td>
+                <td>@st.OIB</td>
+                <td>@Html.ActionLink("Više", "Detaljno", new { id = st.Id })</td>
+            </tr>
+        }
+    </table>
+    
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+    <h2>@ViewBag.Title</h2>
+    <p> Ovo je baza svih studenata veleučilišta </p>
+    <p>Odaberi link : </p>
+        <ul>
+            <li>@Html.ActionLink("Popis studenata","Popis","Student")</li>
+
+        </ul>
+    </div>
+</body>
+</html>
