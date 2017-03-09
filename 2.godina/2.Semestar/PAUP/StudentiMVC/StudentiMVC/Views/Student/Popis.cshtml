@@ -22,7 +22,7 @@
 <body>
     <div>
     <h2>@ViewBag.Title</h2>
-    <table border="1" cellspacing="2"  cellpadding="4" >
+    <table border="2" cellspacing="2"  cellpadding="4"  >
         <tr>
             <td>R.Br.</td>
             <th>Ime i prezime</th>
@@ -30,19 +30,34 @@
             <th>OIB</th>
             <th>Detaljno</th>
         </tr>
-        @foreach(Student st in Model)
+        @foreach (Student st in Model)
         {
+            {
+                string sp = "";
+                if (st.Spol == Spol.Muški)
+                {
+                    sp = "Muški";
+                }
+                else
+                {
+                    sp = "Ženski";
+                }
             <tr>
                 <td>@(++brojac)</td>
                 <td>@st.Ime @st.Prezime</td>
                 <td>@st.Spol</td>
                 <td>@st.OIB</td>
                 <td>@Html.ActionLink("Više", "Detaljno", new { id = st.Id })</td>
+                
             </tr>
+            }
         }
     </table>
     
+    
     </div>
+    <br />
+    <li>@Html.ActionLink("Pocetna", "Index")</li>
 
 </body>
 </html>

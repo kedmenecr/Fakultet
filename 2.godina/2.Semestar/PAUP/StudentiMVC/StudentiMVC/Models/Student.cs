@@ -20,7 +20,7 @@ namespace StudentiMVC.Models
         public string OIB { get; set; }
         public DateTime Datumrodjenja { get; set; }
         public int GodinaStudija { get; set; }
-        public bool RedovniStudent { get; set; }
+        public RedovniStudent RedovniStudent { get; set; }
 
     }
 }

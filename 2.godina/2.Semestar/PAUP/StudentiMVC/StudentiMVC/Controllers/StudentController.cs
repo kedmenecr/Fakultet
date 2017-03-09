@@ -12,10 +12,11 @@ namespace StudentiMVC.Controllers
         //model kontrolera
 
         private StudentiDB baza = new StudentiDB();
+        private StudentiDB baza1 = new StudentiDB();
 
         // GET: Student
 
-            //ulazna stranica
+        //ulazna stranica
         public ActionResult Index()
         {
             ViewBag.Title = "Baza Studenata";
@@ -27,6 +28,12 @@ namespace StudentiMVC.Controllers
             ViewBag.Title = "Popis studenata";
             return View(baza.VratiStudent());
 
+        }
+
+        public ActionResult Detaljno()
+        {
+            ViewBag.Title = "Detaljni podatci";
+            return View(baza1.VratiStudent());  
         }
 
     }
