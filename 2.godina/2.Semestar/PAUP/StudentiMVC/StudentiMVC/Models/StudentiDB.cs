@@ -20,7 +20,7 @@ namespace StudentiMVC.Models
                 Prezime = "Marković",
                 Spol = Spol.Muški,
                 OIB = "12345678903",
-                Datumrodjenja = new DateTime(1898, 3, 16),
+                Datumrodjenja = new DateTime(1997,8,9),
                 GodinaStudija = 2,
                 RedovniStudent = RedovniStudent.Redovni
 
@@ -32,7 +32,7 @@ namespace StudentiMVC.Models
                 Prezime = "Rubina",
                 Spol = Spol.Ženski,
                 OIB = "12345678904",
-                Datumrodjenja = new DateTime(1996, 6, 9),
+                Datumrodjenja = new DateTime(1996,8,19),
                 GodinaStudija = 2,
                 RedovniStudent = RedovniStudent.Vanredni
 

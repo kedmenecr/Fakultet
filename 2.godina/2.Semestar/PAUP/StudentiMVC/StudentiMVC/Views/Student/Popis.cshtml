@@ -29,6 +29,7 @@
             <th>Spol</th>
             <th>OIB</th>
             <th>Detaljno</th>
+            <th>Ažuriranje</th>
         </tr>
         @foreach (Student st in Model)
         {
@@ -48,6 +49,7 @@
                 <td>@st.Spol</td>
                 <td>@st.OIB</td>
                 <td>@Html.ActionLink("Više", "Detaljno", new { id = st.Id })</td>
+                <td>@Html.ActionLink("Ažuriraj", "Azuriraj", new { id = st.Id })</td>
                 
             </tr>
             }

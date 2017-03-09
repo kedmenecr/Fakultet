@@ -2,24 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudentiMVC.Models
 {
     public class Student
     {
-        private int myVar;
-
-        public int Id
-        {
-            get { return myVar; }
-            set { myVar = value; }
-        }
+        
+        [Display(Name = "ID Studenta")]
+        public int Id { get; set; }
         public string  Ime { get; set; }
         public string Prezime { get; set; }
         public Spol Spol { get; set; }
+
+        [Display(Name = "OIB")]
         public string OIB { get; set; }
+
+        [Display(Name = "Datum rođenja")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString ="{0:d}",ApplyFormatInEditMode = true)]
         public DateTime Datumrodjenja { get; set; }
-        public int GodinaStudija { get; set; }
+        public GodinaStudija GodinaStudija { get; set; }
         public RedovniStudent RedovniStudent { get; set; }
 
     }
