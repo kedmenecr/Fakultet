@@ -20,7 +20,7 @@
 <body>
     <div>
     <h2>@ViewBag.Title</h2>
-        <table border="2" cellspacing="2" cellpadding="4"  >
+        <table border="1" cellspacing="2" cellpadding="4"  >
             <tr>
                 
                 <td>R.br.</td>
@@ -35,27 +35,7 @@
             
                 @foreach (Student stD in Model)
                 {
-                    string sp = "";
-                    if (stD.RedovniStudent == RedovniStudent.Redovni)
-                    {
-                        sp = "Redovni";
-                    }
-                    else
-                    {
-                        sp = "Vanredni";
-                    }
-
-                    {
-                        string sp1 = "";
-                        if (stD.Spol == Spol.Muški)
-                        {
-                            sp1 = "Muški";
-                        }
-                        else
-                        {
-                            sp1 = "Ženski";
-                        }
-                    }
+                  
                     <tr>
                         <td>@(++brojac)</td>
                         <td>@stD.Id</td>

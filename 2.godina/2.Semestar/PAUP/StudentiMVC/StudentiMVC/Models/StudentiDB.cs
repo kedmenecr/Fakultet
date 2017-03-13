@@ -10,9 +10,14 @@ namespace StudentiMVC.Models
     {
         //lista studentava
         private List<Student> studenti = new List<Student>();
+        private static bool inicijaliziraniLista = false;
 
         public StudentiDB()
         {
+            if(inicijaliziraniLista == false)
+            {
+                //inicijaliziraniLista = true;
+                //dodavanje prvog studenta
             studenti.Add(new Student
             {
                 Id = 1,
@@ -38,7 +43,8 @@ namespace StudentiMVC.Models
 
             });
 
-            
+            }
+
 
 
         }
@@ -46,6 +52,12 @@ namespace StudentiMVC.Models
         public List<Student> VratiStudent()
         {
             return studenti;
+        }
+        //azuriranje studenta
+        public void AzuriranjeStudenta(Student s)
+        {
+            int indeks = studenti.FindIndex(x => x.Id == s.Id);
+            studenti[indeks] = s;
         }
 
 

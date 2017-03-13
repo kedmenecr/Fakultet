@@ -58,7 +58,7 @@
                 </tr>
                 <tr>
                     <td>@Html.LabelFor(model => model.RedovniStudent) :</td>
-                    <td>@Html.TextBoxFor(model =>model.RedovniStudent)
+                    <td>@Html.EnumDropDownListFor(model =>model.RedovniStudent)
                         @Html.ValidationMessageFor(model => model.RedovniStudent)</td>
                 </tr>
                 
@@ -66,7 +66,7 @@
             //kraj tablice
             <p>@Html.ValidationSummary(true,"Spremanje nije uspjelo! Popravite podatke i pokušajte ponovno!")</p>
             <p><input type="submit" , value="Spremi" /></p>
-            @Html.Action("Povratak na početak bez spremanja", "Popis")
+            <p>@Html.ActionLink("Povratak bez spremanja!", "Detaljno" )</p>
 
         }
     </div>
