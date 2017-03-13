@@ -22,14 +22,51 @@
             @Html.AntiForgeryToken()
             <table>
                 <tr>
-                    <td>@Html.LabelFor(model = model.Id) :</td>
-                    <td>@Html.TextBoxFor(model = model.Id), new {disabled = true}))</td>
+                    <td>@Html.LabelFor(model => model.Id) :</td>
+                    <td>@Html.TextBoxFor(model => model.Id, new {disabled = true})</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.Ime) :</td>
+                    <td>@Html.EditorFor(model => model.Ime) 
+                        @Html.ValidationMessageFor(model => model.Ime) </td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.Prezime) : </td>
+                    <td>@Html.EditorFor(model => model.Prezime) 
+                        @Html.ValidationMessageFor(model => model.Prezime) </td>
+                </tr>
+                <tr>
+                    <td>@Html.RadioButtonFor(model => model.Spol, 'M') Muški
+                        @Html.RadioButtonFor(model => model.Spol, "Ž") Ženski
+                        @Html.ValidationMessageFor(model => model.Spol) </td>
                 </tr>
 
-
-
-
+                <tr>
+                <td>@Html.LabelFor(model => model.OIB) :</td>
+                <td>@Html.EditorFor(model => model.OIB)
+                @Html.ValidationMessageFor(model => model.OIB) </td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.Datumrodjenja) :</td>
+                    <td>@Html.EditorFor(model => model.Datumrodjenja)
+                    @Html.ValidationMessageFor(model => model.Datumrodjenja)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.GodinaStudija) : </td>
+                    <td>@Html.EnumDropDownListFor(model => model.GodinaStudija)
+                        @Html.ValidationMessageFor(model =>model.GodinaStudija)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.RedovniStudent) :</td>
+                    <td>@Html.TextBoxFor(model =>model.RedovniStudent)
+                        @Html.ValidationMessageFor(model => model.RedovniStudent)</td>
+                </tr>
+                
             </table>
+            //kraj tablice
+            <p>@Html.ValidationSummary(true,"Spremanje nije uspjelo! Popravite podatke i pokušajte ponovno!")</p>
+            <p><input type="submit" , value="Spremi" /></p>
+            @Html.Action("Povratak na početak bez spremanja", "Popis")
 
         }
     </div>
