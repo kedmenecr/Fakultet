@@ -9,7 +9,7 @@ namespace StudentiMVC.Models
     public class StudentiDB
     {
         //lista studentava
-        private List<Student> studenti = new List<Student>();
+        private static List<Student> studenti = new List<Student>();
         private static bool inicijaliziraniLista = false;
 
         public StudentiDB()

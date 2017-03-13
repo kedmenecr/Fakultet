@@ -40,7 +40,8 @@ namespace StudentiMVC.Controllers
         }
 
         //azuriranje podatak o studentu
-        public ActionResult Azuriraj(int? Id) {
+        public ActionResult Azuriraj(int? Id)
+        {
             //vracanje ako je id null
             if (Id == null)
             {
@@ -49,11 +50,24 @@ namespace StudentiMVC.Controllers
 
             Student s = studenti.VratiStudent().Find(x => x.Id == Id);
             //nadji prvog studenta koji ima jedna id
-            if(s == null)
+            if (s == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.Title = "Detaljno o studentima";
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Azuriraj(
+            [Bind(Include = "Id,Ime,Prezime,Spol,OIB,GodinaRodjenja,GodinaStudija,RedovitiStundet")] Student s)
+        {
+            if (ModelState.IsValid)
+            {
+                studenti.AzuriranjeStudenta(s);
+                return RedirectToAction("Popis");
+            }
+
+
+        ViewBag.Title = "Detaljno o studentima";
             return View(s);
         }
 
