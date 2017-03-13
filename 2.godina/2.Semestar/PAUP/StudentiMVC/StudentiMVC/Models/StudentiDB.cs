@@ -21,7 +21,7 @@ namespace StudentiMVC.Models
                 Spol = Spol.Muški,
                 OIB = "12345678903",
                 Datumrodjenja = new DateTime(1997,8,9),
-                GodinaStudija = 2,
+                GodinaStudija = GodinaStudija.Peta,
                 RedovniStudent = RedovniStudent.Redovni
 
             });
@@ -33,7 +33,7 @@ namespace StudentiMVC.Models
                 Spol = Spol.Ženski,
                 OIB = "12345678904",
                 Datumrodjenja = new DateTime(1996,8,19),
-                GodinaStudija = 2,
+                GodinaStudija = GodinaStudija.Druga,
                 RedovniStudent = RedovniStudent.Vanredni
 
             });

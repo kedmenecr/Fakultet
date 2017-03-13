@@ -1,0 +1,37 @@
+﻿@using StudentiMVC.Models
+
+@model Student
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+    <h2>@ViewBag.Title @Model.Ime @Model.Prezime</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <table>
+                <tr>
+                    <td>@Html.LabelFor(model = model.Id) :</td>
+                    <td>@Html.TextBoxFor(model = model.Id), new {disabled = true}))</td>
+                </tr>
+
+
+
+
+            </table>
+
+        }
+    </div>
+</body>
+</html>

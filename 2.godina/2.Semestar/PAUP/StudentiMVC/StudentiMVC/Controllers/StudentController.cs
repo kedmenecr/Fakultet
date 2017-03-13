@@ -54,7 +54,7 @@ namespace StudentiMVC.Controllers
                 return HttpNotFound();
             }
             ViewBag.Title = "Detaljno o studentima";
-            return View();
+            return View(s);
         }
 
     }
