@@ -16,7 +16,7 @@ namespace StudentiMVC.Models
         {
             if(inicijaliziraniLista == false)
             {
-                //inicijaliziraniLista = true;
+                inicijaliziraniLista = true;
                 //dodavanje prvog studenta
             studenti.Add(new Student
             {

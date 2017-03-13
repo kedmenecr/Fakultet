@@ -54,6 +54,7 @@ namespace StudentiMVC.Controllers
             {
                 return HttpNotFound();
             }
+            return View(s);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
