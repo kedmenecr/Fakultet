@@ -53,7 +53,7 @@ namespace FileInformation1
                 /* Ovaj dio se kasnije može preskočiti kako ne bi svaki puta
                  * kada je staza u redu smetao korinsika */
                 
-                //string message = "Staza direktorija je valjana";
+                ww//string message = "Staza direktorija je valjana";
                 //string caption = "Provjera valjanosti staze direktorija.";
                 //MessageBoxButtons buttons = MessageBoxButtons.OK;
                 //DialogResult result;
