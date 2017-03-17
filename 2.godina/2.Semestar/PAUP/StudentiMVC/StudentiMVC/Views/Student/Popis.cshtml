@@ -1,5 +1,5 @@
 ﻿@using StudentiMVC.Models
-@model List<Student>
+@model IEnumerable<Student>
 
 
 @{
@@ -22,6 +22,14 @@
 <body>
     <div>
     <h2>@ViewBag.Title</h2>
+        @using (Html.BeginForm("Popis", "Student", FormMethod.Get))
+        {
+            <p>
+                Naziv : @Html.TextBox("Naziv")
+                <input type="submit" value="Traži" />
+            </p>
+        }
+
     <table border="1" cellspacing="2"  cellpadding="4"  >
         <tr>
             <td>R.Br.</td>
@@ -30,6 +38,7 @@
             <th>OIB</th>
             <th>Detaljno</th>
             <th>Ažuriranje</th>
+            <th>Obriši</th>
         </tr>
         @foreach (Student st in Model)
         {
@@ -42,6 +51,7 @@
                 <td>@st.OIB</td>
                 <td>@Html.ActionLink("Više", "Detaljno", new { id = st.Id })</td>
                 <td>@Html.ActionLink("Ažuriraj", "Azuriraj", new { id = st.Id })</td>
+                <td>@Html.ActionLink("Obriši", "Obrisi", new { id = st.Id })</td>
                 
             </tr>
             }
@@ -50,7 +60,9 @@
     </div>
     <br />
     <div>
-        <li>@Html.ActionLink("Pocetna", "Index")</li>
+        <ul>
+            <li>@Html.ActionLink("Pocetna", "Index")</li>
+        </ul>
     </div>
 </body>
 </html>

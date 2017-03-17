@@ -34,10 +34,18 @@ namespace StudentiMVC.Controllers
             return View();
             
         }
-        public ActionResult Popis()
+        public ActionResult Popis(string Naziv)
         {
+            var popis = from s in studenti.VratiStudent() select s;
+
+            //filtracija
+            if (!String.IsNullOrEmpty(Naziv)){
+                popis = popis.Where(st =>(st.Ime + " " + st.Prezime).ToUpper().Contains(Naziv.ToUpper()));
+            }
+
             ViewBag.Title = "Popis studenata";
-            return View(baza.VratiStudent());
+            ViewBag.Test = Naziv;
+            return View(popis);
 
         }
 
@@ -62,14 +70,15 @@ namespace StudentiMVC.Controllers
             else
             {
                 s = studenti.VratiStudent().Find(x => x.Id == Id);
-            //nadji prvog studenta koji ima jedna id
-            if (s == null)
-            {
-                return HttpNotFound();
-            }
+                //nadji prvog studenta koji ima jedna id
+                if (s == null)
+                {
+                    return HttpNotFound();
+                }
+    
                 ViewBag.Title = "Ažuriranje podataka o studentu";
             
-        }
+            }
             ViewBag.GodineStudija = godineStudija;
             return View(s);
         }
@@ -91,9 +100,18 @@ namespace StudentiMVC.Controllers
                     return RedirectToAction("Popis");
                 }
             }
-
             ViewBag.GodineStudija = godineStudija;
             ViewBag.Title = "Ažuriranje podataka o studentu";
+            return View(s);
+        }
+        public ActionResult Obrisi(int? id)
+        {
+            Student s = studenti.VratiStudent().Find(x => x.Id == id);
+            if(Request.HttpMethod == "POST")
+            {
+                studenti.ObrisiStudenta(s);
+                return RedirectToAction("Popis");
+            }
             return View(s);
         }
 

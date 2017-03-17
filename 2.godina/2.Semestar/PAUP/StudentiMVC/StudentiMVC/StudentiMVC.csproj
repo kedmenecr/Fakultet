@@ -243,6 +243,7 @@
     <Content Include="Views\Student\Popis.cshtml" />
     <Content Include="Views\Student\Detaljno.cshtml" />
     <Content Include="Views\Student\Azuriraj.cshtml" />
+    <Content Include="Views\Student\Obrisi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

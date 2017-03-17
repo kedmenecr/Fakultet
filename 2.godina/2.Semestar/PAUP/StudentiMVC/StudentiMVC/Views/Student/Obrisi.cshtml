@@ -1,0 +1,28 @@
+﻿@using StudentiMVC.Models
+
+@model Student
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        <h2>@ViewBag.Title</h2>
+        <h3>Dali ste sigurni da želite obrisati studenta  ?</h3>
+       @using (Html.BeginForm())
+       {
+           @Html.AntiForgeryToken()
+           <input type="submit" value="Obriši" />
+       
+       }
+        
+    </div>
+</body>
+</html>
