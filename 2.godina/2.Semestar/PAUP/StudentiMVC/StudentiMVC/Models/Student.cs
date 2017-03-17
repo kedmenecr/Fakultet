@@ -11,7 +11,10 @@ namespace StudentiMVC.Models
         
         [Display(Name = "ID Studenta")]
         public int Id { get; set; }
+
+        [Required(AllowEmptyStrings =false,ErrorMessage ="Ime je obavezno polje!")]
         public string  Ime { get; set; }
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Prezime je obavezno polje!")]
         public string Prezime { get; set; }
         public Spol Spol { get; set; }
 
@@ -21,8 +24,9 @@ namespace StudentiMVC.Models
         [Display(Name = "Datum rođenja")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString ="{0:d}",ApplyFormatInEditMode = true)]
+        [Required(AllowEmptyStrings = false,ErrorMessage ="Datum rođenja je obavezno polje!")]
         public DateTime Datumrodjenja { get; set; }
-        public GodinaStudija GodinaStudija { get; set; }
+        public int? GodinaStudija { get; set; }
         public RedovniStudent RedovniStudent { get; set; }
 
     }

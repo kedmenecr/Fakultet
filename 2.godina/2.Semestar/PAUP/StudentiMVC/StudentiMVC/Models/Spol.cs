@@ -7,8 +7,8 @@ namespace StudentiMVC.Models
 {
     public enum Spol
     {
-        Muški,
-        Ženski
+        M,
+        Ž
 
 
 }

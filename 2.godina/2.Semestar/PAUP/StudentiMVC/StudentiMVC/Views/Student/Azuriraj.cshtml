@@ -36,8 +36,8 @@
                         @Html.ValidationMessageFor(model => model.Prezime) </td>
                 </tr>
                 <tr>
-                    <td>@Html.RadioButtonFor(model => model.Spol, 'M') Muški
-                        @Html.RadioButtonFor(model => model.Spol, "Ž") Ženski
+                    <td>@Html.LabelFor(model => model.Spol) :
+                        @Html.EnumDropDownListFor(model => model.Spol)
                         @Html.ValidationMessageFor(model => model.Spol) </td>
                 </tr>
 
@@ -53,8 +53,12 @@
                 </tr>
                 <tr>
                     <td>@Html.LabelFor(model => model.GodinaStudija) : </td>
-                    <td>@Html.EnumDropDownListFor(model => model.GodinaStudija)
-                        @Html.ValidationMessageFor(model =>model.GodinaStudija)</td>
+                    <td>@*@Html.EnumDropDownListFor(model => model.GodinaStudija)
+                        @Html.ValidationMessageFor(model =>model.GodinaStudija)*@
+                        @Html.DropDownListFor(model => model.GodinaStudija,
+                       new SelectList(ViewBag.godineStudija, "value","text"))
+                        @Html.ValidationMessageFor(model => model.GodinaStudija)
+                    </td>
                 </tr>
                 <tr>
                     <td>@Html.LabelFor(model => model.RedovniStudent) :</td>
