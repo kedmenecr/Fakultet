@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Help_AddRubberBand" Bounds="259.798097425663,706.375855712891,178.053333333333,57.88" Label="Add rubber band to selection" UseManualLocation="True" />
+    <Node Id="Help_Drag" Bounds="247.701481844224,304.479420344915,58.6333333333332,33.9400000000001" Label="Drag" UseManualLocation="True" />
+    <Node Id="Help_DragDrop" Bounds="0.430895253867348,555.941834060395,175.833333333333,129.88" Icon="DragDrop.png" Label="Drag/Drop selected nodes" UseManualLocation="True" />
+    <Node Id="Help_LeftClick" Bounds="347.198283165654,126.620722871833,91.6733333333333,33.94" Label="Left Click" UseManualLocation="True" />
+    <Node Id="Help_MiddleClick" Bounds="561.685586344401,236.940400917499,117.55,33.94" Label="Middle Click" UseManualLocation="True" />
+    <Node Id="Help_NudgeNode" Bounds="-72.8309403132831,200.019181518555,197.756666666667,33.94" Label="Nudge selected nodes" UseManualLocation="True" />
+    <Node Id="Help_Pan" Bounds="-83.3803020858765,396.730769858818,70,88.94" Icon="Pan.png" Label="Pan" UseManualLocation="True" />
+    <Node Id="Help_RectZoom" Bounds="1001.96977191994,423.067139892578,167.17,94.94" Icon="Zoom.png" Label="Zoom to rectangle" UseManualLocation="True" />
+    <Node Id="Help_RightClick" Bounds="875.152625325521,237.476177713211,104.066666666667,33.94" Label="Right Click" />
+    <Node Id="Help_RightDrag" Bounds="928.363804136171,321.416272713211,58.6333333333333,33.94" Label="Drag" UseManualLocation="True" />
+    <Node Id="Help_RubberBand" Bounds="206.264228587201,500.053223876953,198.506666666667,76.94" Icon="Select.png" Label="Rubber band selection" UseManualLocation="True" />
+    <Node Id="Help_ScrollHorizontal" Bounds="643.219910888672,467.803767519122,138.353333333333,55.94" Icon="ScrollHorizontal.png" IsDragSource="True" Label="Scroll left/right" UseManualLocation="True" />
+    <Node Id="Help_ScrollVertical" Bounds="641.464386393229,681.623957519123,140.453333333333,87.94" Icon="Scroll.png" IsDragSource="True" Label="Scroll up/down" UseManualLocation="True" />
+    <Node Id="Help_Select" Bounds="377.782336984112,345.604384276964,67.1633333333334,33.9400000000001" Label="Select" UseManualLocation="True" />
+    <Node Id="Help_ShowKeyboardHelp" Category="HelpLink" Bounds="938.580234081909,-23.9660982815128,220.027914763953,188.960936072965" Icon="Keyboard.png" Label="Show Keyboard Help" Reference="Keyboard.dgml" />
+    <Node Id="Help_SpinWheel" Bounds="727.077042469863,325.56783842501,109.81,33.94" Label="Spin Wheel" UseManualLocation="True" />
+    <Node Id="Help_Title" Category="Comment" Bounds="64.9791952330236,-33.2463851345072,328.883333333333,81.82" Label="This help page is also a Directed Graph Document so you can try out all these mouse gestures right here..." MaxWidth="350" UseManualLocation="True" />
+    <Node Id="Help_ToogleNodeSelection" Bounds="434.770895253867,573.743862519122,183.396666666667,57.8800000000001" Label="Toggles the selected node" UseManualLocation="True" />
+    <Node Id="Help_Zoom" Bounds="950.559359175399,594.16186346562,76,94.94" Icon="Zoom.png" Label="Zoom" UseManualLocation="True" />
+    <Node Id="Help_ZoomFit" Bounds="494.945786132812,320.8804959175,109.463333333333,94.94" Icon="Zoom.png" Label="Zoom to fit" UseManualLocation="True" />
+    <Node Id="Mouse" Bounds="545.468859846653,-53.8019340758229,170,188.94" Icon="Mouse.png" Label=" " UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="Help_Drag" Target="Help_DragDrop" Bounds="134.063719030477,338.419420344915,132.261733066026,209.907915005461" LabelBounds="148.20493121278,332.727080216044,75.9999999999998,33" />
+    <Link Source="Help_Drag" Target="Help_NudgeNode" Bounds="75.1276308015092,237.417590997096,172.573851042715,71.8295072262498" Icon="Shift.png" LabelBounds="84.6460208831907,275.17878802337,76,33.0000000000001" />
+    <Link Source="Help_Drag" Target="Help_Pan" Bounds="-4.9341006881933,332.238378897557,252.635582532417,92.9735586878315" Label="background" LabelBounds="-36.9928139436169,350.777089054773,95.3766666666667,23.94" />
+    <Link Source="Help_Drag" Target="Help_RubberBand" Bounds="279.246123760508,338.419420344915,20.0492014411107,152.710380653469" Icon="Shift.png" LabelBounds="293.270870515099,396.878557258259,76,33" />
+    <Link Source="Help_LeftClick" Target="Help_Drag" Bounds="293.004702903263,160.560722871833,88.9607566741731,136.380628737138" />
+    <Link Source="Help_LeftClick" Target="Help_Select" Bounds="394.455348236948,160.560722871833,14.737576982628,176.075022740445" />
+    <Link Source="Help_LeftClick" Target="Help_ZoomFit" Bounds="404.861902846785,160.560722871833,106.586188845627,152.936062441293" Label="×2" LabelBounds="459.795821848348,211.945209295906,22.0166666666667,23.94" />
+    <Link Source="Help_MiddleClick" Target="Help_ZoomFit" Bounds="583.772704778707,270.880400917499,26.1916496615062,42.3458912505932" />
+    <Link Source="Help_RightClick" Target="Help_RightDrag" Bounds="933.35097278093,271.416177713211,15.0913917783539,41.5410108407713" />
+    <Link Source="Help_RightDrag" Target="Help_RectZoom" Bounds="974.101300542924,355.356272713211,59.2612112456798,61.2431144319179" />
+    <Link Source="Help_RubberBand" Target="Help_AddRubberBand" Bounds="313.983469417823,576.993223876953,26.5383067579007,120.592951830076" LabelBounds="331.733331951824,609.879421958216,76,33" />
+    <Link Source="Help_ScrollHorizontal" Target="Help_ScrollVertical" Bounds="711.853665416117,523.743767519122,0.457047097784198,148.880232408928" Icon="Control.png" LabelBounds="716.082188965053,581.687720522226,75.0097701673836,33.0046059360523" />
+    <Link Source="Help_Select" Target="Help_ToogleNodeSelection" Bounds="419.499191763282,379.544384276964,89.2060550962922,186.083804584367" Icon="Control.png" LabelBounds="465.905696873493,438.717117921011,75.0097701673839,33.0046059360523" />
+    <Link Source="Help_SpinWheel" Target="Help_ScrollHorizontal" Bounds="728.819189066055,359.50783842501,45.456662391162,100.101276948905" Icon="Shift.png" LabelBounds="753.368554071682,410.385420587188,76,33.0000000000001" />
+    <Link Source="Help_SpinWheel" Target="Help_Zoom" Bounds="793.702828480272,359.50783842501,156.955378402498,227.248647754931" LabelBounds="817.878022278858,435.199265251244,0,23.94" />
+    <Link Source="Mouse" Target="Help_LeftClick" Bounds="440.440873220455,77.5137963424761,105.027986626198,45.5274456659484" />
+    <Link Source="Mouse" Target="Help_MiddleClick" Bounds="621.678992714177,135.138065924177,4.35603086920662,92.8122311649037" />
+    <Link Source="Mouse" Target="Help_RightClick" Bounds="715.468859846653,101.908687293183,180.861134199701,130.306449881092" />
+    <Link Source="Mouse" Target="Help_SpinWheel" Bounds="677.884837418157,135.138065924177,91.5424502285533,182.386100973032" />
+  </Links>
+  <Categories>
+    <Category Id="Comment" Label="Comment" Description="Represents a user defined comment on the diagram" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Comments" />
+    <Category Id="HelpLink" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IsDragSource" Label="IsDragSource" Description="IsDragSource" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="IsReference" Label="IsReference" Description="Annotation to make a property into a reference property" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="MaxWidth" Label="Max Width" Description="Maximum width allowed for nodes and groups" DataType="System.Double" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="Reference" Label="Reference" Description="Reference" DataType="System.String" IsReference="True" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node">
+      <Condition Expression="HasCategory('HelpLink')" />
+      <Setter Property="IconPlacement" Value="Top" />
+      <Setter Property="Shape" Value="None" />
+      <Setter Property="FontSize" Value="18" />
+      <Setter Property="MaxWidth" Value="400" />
+      <Setter Property="Foreground" Value="Blue" />
+    </Style>
+    <Style TargetType="Node">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="LemonChiffon" />
+      <Setter Property="Shape" Value="Plain" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="Stroke" Value="Brown" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="MaxWidth" Value="350" />
+    </Style>
+    <Style TargetType="Node">
+      <Setter Property="IconPlacement" Value="Top" />
+      <Setter Property="Shape" Value="None" />
+      <Setter Property="FontSize" Value="18" />
+      <Setter Property="MaxWidth" Value="200" />
+    </Style>
+    <Style TargetType="Link">
+      <Setter Property="FontSize" Value="18" />
+      <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+  </Styles>
+</DirectedGraph>

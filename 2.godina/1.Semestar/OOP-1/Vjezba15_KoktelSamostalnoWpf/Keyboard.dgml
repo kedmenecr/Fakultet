@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Help_KeyB" Bounds="1207.55455144814,431.912734985352,250,105" Label="Add both incoming and outgoing nodes to the selection" UseManualLocation="True" UseManualSize="True" />
+    <Node Id="Help_KeyDelete" Bounds="1717.21898925781,384.58149507515,144.49,33.9400000000001" Label="Delete selection" />
+    <Node Id="Help_KeyF12" Bounds="1352.7089164377,586.912830448014,121.366666666667,33.9400000000001" Label="Go to code" />
+    <Node Id="Help_KeyI" Bounds="1147.39336305767,339.127126180491,97.96,33.9400000000001" Label="Add incoming nodes to the selection" />
+    <Node Id="Help_KeyInsert" Bounds="1565.14027896872,468.521590074997,137.553333333333,33.9400000000001" Label="Insert a new node at mouse position" UseManualLocation="True" />
+    <Node Id="Help_KeyInsertLinked" Bounds="1544.0849182691,592.474410362396,189.533333333333,33.9400000000001" Icon="" Label="Insert a new node with link from focus node" UseManualLocation="True" />
+    <Node Id="Help_KeyInsertReverseLinked" Bounds="1461.33935827783,703.170895872453,199.076666666667,57.8800000000001" Icon="" Label="Insert a new node with link to focus node" UseManualLocation="True" />
+    <Node Id="Help_KeyMinus" Bounds="1651.78676734206,29.9356654181302,141.703333333333,33.94" Label="Collapse groups" UseManualLocation="True" />
+    <Node Id="Help_KeyO" Bounds="1068.89605224609,251.635349439495,106.74,33.9400000000001" Label="Add outgoing nodes to the selection" />
+    <Node Id="Help_KeyPlus" Bounds="1734.85651048615,118.285036098763,125.433333333333,33.94" Label="Expand groups" UseManualLocation="True" />
+    <Node Id="Help_KeyStar" Bounds="1714.11945756364,260.465316764385,124.246666666667,33.9400000000001" Label="Expand groups deeply" UseManualLocation="True" />
+    <Node Id="Help_Keyboard_Title" Category="Comment" Bounds="1047.47178072073,-31.2657806334702,181.446666666667,33.94" Label="This help page describes the keyboard shortcuts that you can use in DGML documents. Menu item shortcuts are not included, as these are best discovered through the menus themselves." MaxWidth="350" />
+    <Node Id="Help_ShowMouseHelp" Category="HelpLink" Bounds="956.80112111481,557.532399708651,198.993333333333,188.94" Icon="Mouse.png" Label="Show Mouse Help" Reference="Mouse.dgml" UseManualLocation="True" />
+    <Node Id="Keyboard" Bounds="1351.76500617455,114.936635360093,220.027914763953,120" Icon="Keyboard.png" Label="" UseManualLocation="True" UseManualSize="True" />
+  </Nodes>
+  <Links>
+    <Link Source="Help_KeyInsert" Target="Help_KeyInsertLinked" Bounds="1634.59253194906,502.461590074997,3.22545463588858,81.0199438075813" Icon="Alt.png" LabelBounds="1640.20526052095,526.389700780285,57.0072578386278,33.0046059360523" />
+    <Link Source="Help_KeyInsertLinked" Target="Help_KeyInsertReverseLinked" Bounds="1584.10168712677,626.414410362396,43.9627870165339,69.1611043980513" Icon="Shift.png" LabelBounds="1607.77094310437,662.067865299144,76,33" />
+    <Link Source="Keyboard" Target="Help_KeyB" Bounds="1357.94423318801,234.936630249023,78.7812364576362,188.67104502716" Icon="B.png" LabelBounds="1399.18042024109,330.04278608327,47.0058621004302,33.0046059360523" />
+    <Link Source="Keyboard" Target="Help_KeyDelete" Bounds="1548.53896602218,234.936630249023,208.984102362536,144.525701391708" Icon="Delete.png" LabelBounds="1654.16860907776,272.549917645398,58.0073974124477,33.0046059360523" />
+    <Link Source="Keyboard" Target="Help_KeyF12" Bounds="1436.22521972656,234.936630249023,28.5404052734375,345.532913208008" Icon="F12.png" LabelBounds="1468.44621317938,316.572408860796,64.5150779461294,34.5571420332364" />
+    <Link Source="Keyboard" Target="Help_KeyI" Bounds="1228.66833879179,234.936630249023,145.208830622081,99.1166008941476" Icon="I.png" LabelBounds="1302.40028633335,286.14679965856,46.0057225266105,33.0046059360523" />
+    <Link Source="Keyboard" Target="Help_KeyInsert" Bounds="1495.03647772346,234.936630249023,125.110961784377,225.713323658674" Icon="Insert.png" LabelBounds="1559.34121109727,313.819090476301,58.0073974124477,33.0046059360523" />
+    <Link Source="Keyboard" Target="Help_KeyMinus" Bounds="1571.7929490812,67.8410426098652,108.190250500543,53.1002521290591" Icon="Minus.png" LabelBounds="1579.00115687336,59.5911531770711,46.0057225266105,33.0046059360523" />
+    <Link Source="Keyboard" Target="Help_KeyO" Bounds="1184.22187777233,205.288541129485,167.543156544916,46.2237253990064" Icon="O.png" LabelBounds="1261.00530664912,232.403094854525,46.0057225266105,33.0046059360523" />
+    <Link Source="Keyboard" Target="Help_KeyPlus" Bounds="1571.7929490812,143.722615235137,154.125751991456,18.2134051260211" Icon="Plus.png" LabelBounds="1619.65758384689,115.824615699605,46.0057225266105,33.0046059360523" />
+    <Link Source="Keyboard" Target="Help_KeyStar" Bounds="1571.7929490812,210.795403687419,143.829321024064,46.8808063916189" Icon="Star.png" LabelBounds="1637.8737318078,197.217364524589,46.0165788586994,33.013343959441" />
+  </Links>
+  <Categories>
+    <Category Id="Comment" Label="Comment" Description="Represents a user defined comment on the diagram" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Comments" />
+    <Category Id="HelpLink" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="IsReference" Label="IsReference" Description="Annotation to make a property into a reference property" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="MaxWidth" Label="Max Width" Description="Maximum width allowed for nodes and groups" DataType="System.Double" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="Reference" Label="Reference" Description="Reference" DataType="System.String" IsReference="True" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="UseManualSize" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node">
+      <Condition Expression="HasCategory('HelpLink')" />
+      <Setter Property="IconPlacement" Value="Top" />
+      <Setter Property="Shape" Value="None" />
+      <Setter Property="FontSize" Value="18" />
+      <Setter Property="MaxWidth" Value="400" />
+      <Setter Property="Foreground" Value="Blue" />
+    </Style>
+    <Style TargetType="Node">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="LemonChiffon" />
+      <Setter Property="Shape" Value="Plain" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="Stroke" Value="Brown" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="MaxWidth" Value="350" />
+    </Style>
+    <Style TargetType="Node">
+      <Setter Property="IconPlacement" Value="Top" />
+      <Setter Property="Shape" Value="None" />
+      <Setter Property="FontSize" Value="18" />
+      <Setter Property="MaxWidth" Value="200" />
+    </Style>
+    <Style TargetType="Link">
+      <Setter Property="FontSize" Value="18" />
+      <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+  </Styles>
+</DirectedGraph>

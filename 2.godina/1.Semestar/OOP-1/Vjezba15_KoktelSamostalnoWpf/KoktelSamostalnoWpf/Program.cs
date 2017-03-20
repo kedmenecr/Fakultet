@@ -13,11 +13,12 @@ namespace KoktelSamostalnoWpf
         {
             // preprema koktela
             Koktel CubaLibre = new Koktel("Cuba Libre");
-            CubaLibre.Dodaj(new Limeta(0.5));
-            CubaLibre.Dodaj(new Rum(0.4, "Baccardi gold"));
-            CubaLibre.Dodaj(new CocaCola(1,"zero"));
+            CubaLibre.Dodaj(new Limeta(2));
+            CubaLibre.Dodaj(new Rum(1.5, "Baccardi gold"));
+            CubaLibre.Dodaj(new CocaCola(2,"zero"));
             CubaLibre.Dodaj(new Led("drobljeni"));
             Console.WriteLine(CubaLibre.Posluzi());
+            //CubaLibre.Posluzi(); druga metoda kod koje je ptoerbno void
             Console.ReadKey();
         }
     }
