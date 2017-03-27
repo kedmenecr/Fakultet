@@ -34,7 +34,7 @@ namespace StudentiMVC.Controllers
             return View();
             
         }
-        public ActionResult Popis(string Naziv)
+        public ActionResult Popis(string Naziv,char? Spol)
         {
             var popis = from s in studenti.VratiStudent() select s;
 
@@ -42,6 +42,11 @@ namespace StudentiMVC.Controllers
             if (!String.IsNullOrEmpty(Naziv)){
                 popis = popis.Where(st =>(st.Ime + " " + st.Prezime).ToUpper().Contains(Naziv.ToUpper()));
             }
+            if(Spol != null)
+            {
+                popis = popis.Where(st => (st.Spol == Spol));
+            }
+            
 
             ViewBag.Title = "Popis studenata";
             ViewBag.Test = Naziv;
@@ -86,8 +91,18 @@ namespace StudentiMVC.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Azuriraj(
-            [Bind(Include = "Id,Ime,Prezime,Spol,OIB,GodinaRodjenja,GodinaStudija,RedovitiStundet")] Student s)
+            [Bind(Include = "Id,Ime,Prezime,Spol,OIB,DatumRodjenja,GodinaStudija,RedovitiStundet")] Student s)
         {
+            if (!OIB.CheckOIB(s.OIB))
+            {
+                ModelState.AddModelError("Oib", "Neispravan OIB!");
+            }
+            //provjera datum
+            if(s.DatumRodjenja >= DateTime.Now)
+            {
+                ModelState.AddModelError("DatumRodjenja", "Datum mora biti manji od današnjeg!");
+            }
+
             if (ModelState.IsValid)
             {
                 if(s.Id != 0) { 

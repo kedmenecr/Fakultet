@@ -13,6 +13,9 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/bundles/jquery")
+    @Styles.Render("~/bundles/jqueryval")
 </head>
 <body>
     <div>
@@ -37,7 +40,8 @@
                 </tr>
                 <tr>
                     <td>@Html.LabelFor(model => model.Spol) :
-                        @Html.EnumDropDownListFor(model => model.Spol)
+                        @Html.RadioButtonFor(model => model.Spol,'M') Muški
+                        @Html.RadioButtonFor(model => model.Spol, 'Ž') Ženski
                         @Html.ValidationMessageFor(model => model.Spol) </td>
                 </tr>
 
@@ -47,9 +51,9 @@
                 @Html.ValidationMessageFor(model => model.OIB) </td>
                 </tr>
                 <tr>
-                    <td>@Html.LabelFor(model => model.Datumrodjenja) :</td>
-                    <td>@Html.EditorFor(model => model.Datumrodjenja)
-                    @Html.ValidationMessageFor(model => model.Datumrodjenja)</td>
+                    <td>@Html.LabelFor(model => model.DatumRodjenja) :</td>
+                    <td>@Html.TextBoxFor(model => model.DatumRodjenja, "{0:d}")
+                    @Html.ValidationMessageFor(model => model.DatumRodjenja)</td>
                 </tr>
                 <tr>
                     <td>@Html.LabelFor(model => model.GodinaStudija) : </td>
@@ -68,9 +72,10 @@
                 
             </table>
             //kraj tablice
-            <p>@Html.ValidationSummary(true,"Spremanje nije uspjelo! Popravite podatke i pokušajte ponovno!")</p>
+            <p>@Html.ValidationSummary(true,
+              "Spremanje nije uspjelo! Popravite podatke i pokušajte ponovno!")</p>
             <p><input type="submit" , value="Spremi" /></p>
-            <p>@Html.ActionLink("Povratak bez spremanja!", "Detaljno" )</p>
+            <p>@Html.ActionLink("Povratak bez spremanja!", "Popis" )</p>
 
         }
     </div>

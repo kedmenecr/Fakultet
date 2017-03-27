@@ -23,9 +23,9 @@ namespace StudentiMVC.Models
                 Id = 1,
                 Ime = "Marko",
                 Prezime = "Marković",
-                Spol = Spol.M,
+                Spol = 'M',
                 OIB = "12345678903",
-                Datumrodjenja = new DateTime(1997,8,9),
+                DatumRodjenja = new DateTime(1997,8,9),
                 GodinaStudija = 1,
                 RedovniStudent = RedovniStudent.Redovni
 
@@ -35,9 +35,9 @@ namespace StudentiMVC.Models
                 Id = 2,
                 Ime = "Dominik",
                 Prezime = "Rubina",
-                Spol = Spol.Ž,
+                Spol = 'Ž',
                 OIB = "12345678904",
-                Datumrodjenja = new DateTime(1996,8,19),
+                DatumRodjenja = new DateTime(1996,8,19),
                 GodinaStudija = 2,
                 RedovniStudent = RedovniStudent.Vanredni
 
