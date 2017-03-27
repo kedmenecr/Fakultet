@@ -11,33 +11,22 @@
     <div class="col-md-4">
         <h2>Pretraživanje i pregled!</h2>
         <p>Pretraživanje po nazivu, pretraživanje po spolu ,ažuriranje studenta , brisanje studenta.</p>
-
+        <p>@Html.ActionLink("Pregled", "Popis", "Student" , new { @class = "btn btn-default btn -lg" , role ="button" }) </p>
     </div>
+
+    <div class="col-md-4">
+        <h2>Unos novog studenta</h2>
+        <p>Unos novog studenta u centralnu bazu podataka svih studenta veleučilišta.</p>
+        <p>@Html.ActionLink("Unos", "Azuriraj", "Student", new { @class = "btn btn-default btn -lg", role = "button" }) </p>
+    </div>
+    
+   <div class="col-md-4">
+        <p>Više podataka o projektu Studenti,autori projekta i kontakt podatci!</p>
+        <p><a class="btn btn-default btn-lg" role="button" href="#">Vidi detalje!</a></p>
+    
+   </div>
+   
+
 </div>
 
 
-
-
-
-
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-</head>
-<body>
-    <div>
-    <h2>@ViewBag.Title</h2>
-    <p> Ovo je baza svih studenata veleučilišta </p>
-    <p>Odaberi link : </p>
-        <ul>
-            <li>@Html.ActionLink("Popis studenata","Popis","Student")</li>
-            <li>@Html.ActionLink("Detaljno o studentima", "Detaljno")</li>
-            <li>@Html.ActionLink("Upiši novog studenta","Azuriraj")</li>
-        </ul>
-    </div>
-</body>
-</html>
