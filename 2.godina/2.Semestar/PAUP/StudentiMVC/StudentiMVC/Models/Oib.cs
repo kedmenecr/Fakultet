@@ -10,7 +10,11 @@ namespace StudentiMVC.Models
     {
         public static bool CheckOIB(string oib)
         {
-            if(oib.Length != 11 )
+            if (oib == null)
+            {
+                return false;
+            }
+            if (oib.Length != 11 )
             {
                 return false;
             }
