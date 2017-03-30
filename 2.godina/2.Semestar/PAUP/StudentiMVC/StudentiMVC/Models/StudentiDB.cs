@@ -18,16 +18,16 @@ namespace StudentiMVC.Models
             {
                 inicijaliziraniLista = true;
                 //dodavanje prvog studenta
-            studenti.Add(new Student
-            {
-                Id = 1,
-                Ime = "Marko",
-                Prezime = "Marković",
-                Spol = 'M',
-                OIB = "12345678903",
-                DatumRodjenja = new DateTime(1997,8,9),
-                GodinaStudija = 1,
-                RedovniStudent = RedovniStudent.Redovni
+                studenti.Add(new Student
+                {
+                    Id = 1,
+                    Ime = "Marko",
+                    Prezime = "Marković",
+                    Spol = 'M',
+                    OIB = "12345678903",
+                    DatumRodjenja = new DateTime(1997, 8, 9),
+                    GodinaStudija = 1,
+                    RedovniStudent = true
 
             });
             studenti.Add(new Student
@@ -39,7 +39,7 @@ namespace StudentiMVC.Models
                 OIB = "12345678904",
                 DatumRodjenja = new DateTime(1996,8,19),
                 GodinaStudija = 2,
-                RedovniStudent = RedovniStudent.Vanredni
+                RedovniStudent = false
 
             });
 

@@ -32,7 +32,7 @@ namespace StudentiMVC.Models
         [Required(ErrorMessage ="Datum rođenja je obavezno polje!")]
         public DateTime DatumRodjenja { get; set; }
         public int? GodinaStudija { get; set; }
-        public RedovniStudent RedovniStudent { get; set; }
+        public bool RedovniStudent { get; set; }
 
     }
 }

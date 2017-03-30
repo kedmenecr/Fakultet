@@ -13,8 +13,6 @@ namespace StudentiMVC.Controllers
     {
         //model kontrolera
 
-        private StudentiDB baza = new StudentiDB();
-        private StudentiDB baza1 = new StudentiDB();
         private StudentiDB studenti = new StudentiDB();
         List<object> godineStudija = new List<object>
         {   new {value = 1, text ="Prva"},
@@ -54,10 +52,19 @@ namespace StudentiMVC.Controllers
 
         }
 
-        public ActionResult Detaljno()
+        public ActionResult Detaljno(int? id)
         {
-            ViewBag.Title = "Detaljni podatci";
-            return View(baza1.VratiStudent());  
+           if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Student s = studenti.VratiStudent().Find(x => x.Id == id);
+
+            if (s == null) {
+                return HttpNotFound();
+            }
+            ViewBag.Title = "Detaljno o studentu";
+            return View(s);
         }
 
         //azuriranje podatak o studentu

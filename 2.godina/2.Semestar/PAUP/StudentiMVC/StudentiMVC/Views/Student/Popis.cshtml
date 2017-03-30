@@ -1,38 +1,42 @@
 ﻿@using StudentiMVC.Models
 @model IEnumerable<Student>
 
-
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @{ 
+
     int brojac = 0;
 }
-@{ 
-    
+
+    <h2>@ViewBag.Title</h2>
+    @using (@Html.BeginForm("Popis", "Student", FormMethod.Get, new { @class = "from-inline" }))
+
+    {
+        <div class="form-group">
+      @Html.Label("Naziv", new { @class ="sr-only"})
+      @Html.TextBox("Naziv", "", new { @class = "form-control",placeholder="Naziv studenta"})
+        </div>
+
+<div class="form-group">
+    <label class="radio-inline">
+        @Html.RadioButton("Spol","M") Muški
+    </label>
+    <label class="radio-inline">
+        @Html.RadioButton("Spol", "Ž") Ženski
+    </label>
+    <label class="radio-inline">
+        @Html.RadioButton("Spol", "") Svi
+    </label>
+    <button type="submit" class="btn btn-primary">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Traži
+    </button>
+</div>
 
 }
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-</head>
-<body>
-    <div>
-    <h2>@ViewBag.Title</h2>
-        @using (Html.BeginForm("Popis", "Student", FormMethod.Get))
-        {
-            <p>
-                Naziv : @Html.TextBox("Naziv")
-                <input type="submit" value="Traži" />
-            </p>
-        }
-
-    <table border="1" cellspacing="2"  cellpadding="4"  >
+    <table class="table"  >
         <tr>
-            <td>R.Br.</td>
+            <th>R.Br.</th>
             <th>Ime i prezime</th>
             <th>Spol</th>
             <th>OIB</th>
@@ -43,7 +47,7 @@
         @foreach (Student st in Model)
         {
             {
-                
+
             <tr>
                 <td>@(++brojac)</td>
                 <td>@st.Ime @st.Prezime</td>
@@ -54,15 +58,13 @@
                 <td>@Html.ActionLink("Obriši", "Obrisi", new { id = st.Id })</td>
                 
             </tr>
+                }
             }
-        }
     </table>
-    </div>
+
     <br />
     <div>
         <ul>
             <li>@Html.ActionLink("Pocetna", "Index")</li>
         </ul>
     </div>
-</body>
-</html>

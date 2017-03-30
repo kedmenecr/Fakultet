@@ -1,63 +1,74 @@
 ﻿@using StudentiMVC.Models
+@model Student
 
-@model List<Student>
-
-@{ 
-    int brojac = 0;
-}
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+@{
+    string spol;
+    if (Model.Spol == 'M')
+    {
+        spol = "muški";
+    }
+    else
+    {
+        spol = "ženski";
+    }
+}
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-    <h2>@ViewBag.Title</h2>
-        <table border="1" cellspacing="2" cellpadding="4"  >
-            <tr>
-                
-                <td>R.br.</td>
-                <td>ID</td>
-                <td>Ime i prezime</td>
-                <td>Spol</td>
-                <td>OIB</td>
-                <td>Datum rođ.</td>
-                <td>Godina studija</td>
-                <td>Redovni student</td>
-            </tr>
-            
-                @foreach (Student stD in Model)
-                {
-                  
-                    <tr>
-                        <td>@(++brojac)</td>
-                        <td>@stD.Id</td>
-                        <td>@stD.Ime @stD.Prezime</td>
-                        <td>@stD.Spol</td>
-                        <td>@stD.OIB</td>
-                        <td>@stD.DatumRodjenja</td>
-                        <td>@stD.GodinaStudija</td>
-                        <td>@stD.RedovniStudent</td>
-
-
-
-                    </tr>
-
-                }
-
-
-
-
-        </table>
+<h2>@ViewBag.Title</h2>
+<h1>@Model.Ime @Model.Prezime</h1>
+<hr />
+<div class="row">
+    <div class="col-md-2">
+        Spol:
     </div>
-    <br />
-    @Html.ActionLink("Početna", "Index")
-</body>
-</html>
+    <div class="col-md-10">
+        @spol
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        OIB:
+    </div>
+    <div class="col-md-10">
+        @Model.OIB
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Datum rođenja:
+    </div>
+    <div class="col-md-10">
+        @Model.DatumRodjenja.ToString("dd.MM.yyyy")
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Godina studija:
+    </div>
+    <div class="col-md-10">
+        @Model.GodinaStudija
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Redoviti student:
+    </div>
+    <div class="col-md-10">
+        @if (@Model.RedovniStudent == true)
+        {
+            <span>Da</span>
+        }
+        else
+        {
+            <span>Ne</span>
+        }
+    </div>
+</div>
+<br />
+<p>
+    @Html.ActionLink("Povratak na popis studenata", "Popis")
+</p>
